@@ -1,4 +1,4 @@
-# todo
+# todo (preview, work in progress)
 React Todo&amp;Note-Taking, infinitetly deep nesting, flexible, but clean minimalist interface [alpha/prototyping stage]
 
 ![todo-columnMode](https://user-images.githubusercontent.com/26009380/170873012-00b85f44-223f-4b55-9272-5859000dc2d5.png)
