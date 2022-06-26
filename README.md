@@ -1,6 +1,8 @@
 # todo (preview, work in progress)
 React Todo&amp;Note-Taking, infinitetly deep nesting, flexible, but clean minimalist interface
 
+You can try it out under the following url (because of github pages limitation, don't manually change the URL): https://maerf.github.io/todo
+
 ![todo-columnMode](https://user-images.githubusercontent.com/26009380/170873012-00b85f44-223f-4b55-9272-5859000dc2d5.png)
 ![todo-nodes](https://user-images.githubusercontent.com/26009380/170873157-5f2fd8c2-3b24-41e2-90a5-c397c06ef5cf.png)
 ![todo-today-sample](https://user-images.githubusercontent.com/26009380/170873721-76a500f8-a9fb-4630-86ef-17b0da297b14.png)
