@@ -1,0 +1,46 @@
+/** @format */
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+
+//redux:
+import { store } from "./app/store";
+import { Provider } from "react-redux";
+
+//Brower-Storage
+import { debounce } from "debounce";
+import { saveState } from "./app/browser-storage";
+
+//Theme
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
+
+import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
+
+store.subscribe(
+    // using debounce to save the state only once each 800ms
+    debounce(() => {
+        saveState(store.getState());
+    }, 800)
+);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+    // <React.StrictMode>
+    <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <BrowserRouter>
+            <Provider store={store}>
+                <App />
+            </Provider>
+        </BrowserRouter>
+    </ThemeProvider>
+    // </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
